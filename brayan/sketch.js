@@ -41,26 +41,16 @@ function texto() {
   } else {
     fill(255, 200, 200);
   }
-
-  textSize(20);
-  text("OpenProcessing", width / 4, height - 2 * (height / 11));
-
-  fill(255, 100, 100, 30);
-  rect(width / 4 - 100, height - 2 * (height / 11) - 30, 200, 50);
-  fill(255, 141, 131);
-
-  if ((mouseX > (width / 1.5 - 100) && mouseX < (width / 1.5 + 200)) && (mouseY > (height - 2 * (height / 11) - 30) && mouseY < (height - 2 * (height / 11) + 20))) {
-    fill(255, 170, 0, 170);
-  } else {
-    fill(254, 247, 229, 190);
-  }
-
-  text("Github Repository", width / 1.32, height - 2 * (height / 11));
-  fill(255, 170, 0, 30);
-  rect(width / 1.45 - 1, height - 2 * (height / 11) - 30, 200, 50);
-  fill(255, 230, 0, 0);
+ button = createButton('OpenProcessing');
+  
+  button. size(windowWidth/2.90, windowHeight/8);
+  button. position(windowWidth/13, windowHeight/1.3);
+  
+  button = createButton('Github');
+  button. size(windowWidth/2.90, windowHeight/8);
+  button. position(windowWidth/1.6, windowHeight/1.3);
+  
 }
-
 function mousePressed() {
   if ((mouseX > (width / 4 - 100) && mouseX < (width / 4 + 100)) && (mouseY > (height - 2 * (height / 11) - 30) && mouseY < (height - 2 * (height / 11) + 20))) {
     window.open('https://www.openprocessing.org/user/98936/');
